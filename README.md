@@ -15,3 +15,7 @@ Currently, two official plugins are available:
 
 - Run On Brower.<br>
 <code>npm run dev</code>
+
+##Screenshots
+![Image Alt text](/Screenshots/ss1.png))
+![Image Alt text](/Screenshots/ss2.png))
