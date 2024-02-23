@@ -8,7 +8,7 @@ import LogoImage from '../assets/images/96858bf39fb28499437875ab86a6d1dcd335a243
 export default function Main() {
   return (
     <div className='flex bg-yellow-50'>
-      <div className='w-64 h-lvh border-r border-black overflow-hidden'>
+      <div className='w-64 md:h-lvh border-r border-black overflow-hidden'>
         <div className='m-4 '>
           <span className='flex items-center overflow-hidden'>
             <div className='w-48 h-8 bg-cover bg-center bg-no-repeat' style={{ backgroundImage: `url(${LogoImage})` }}></div>
@@ -31,7 +31,7 @@ export default function Main() {
         <div className='w-full h-40 bg-box border border-black rounded-lg overflow-hidden mt-6 bg-box'>
           <input type='text' className='w-full h-full p-4 font-bold text-sm text-gray-900 bg-transparent outline-none' placeholder="What's on your mind??" />
         </div>
-        <div className='flex justify-end'>
+        <div className='flex justify-end place-items-center'>
           <button className='w-20 h-8 mt-2 bg-zinc-700 text-white font-bold text-xs rounded-md'>Post</button>
         </div>
         <div className='w-full bg-box border border-black rounded-lg overflow-hidden mt-4 '>
@@ -52,7 +52,7 @@ export default function Main() {
             </div>
           </div>
           <div className='flex justify-end'>
-           <div className="flex flex-col  place-items-center ">
+           <div className="flex flex-col place-items-center">
                <span className=' block p-2 text-sm font-bold text-gray-900'>0.0ETH</span>
               <button className='w-20 h-8 m-2 bg-gray-300 text-gray-900 font-semibold text-xs rounded-full border border-black bg-yellow-50'>Tip 0.1ETH</button>
           </div>
