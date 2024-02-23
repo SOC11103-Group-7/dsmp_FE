@@ -9,6 +9,7 @@ import LogoImage from '../assets/images/96858bf39fb28499437875ab86a6d1dcd335a243
 
 export default function Main() {
   return (
+    
     <div className='flex bg-yellow-50'>
       <div className='w-64 border-r border-black overflow-hidden'>
         <div className='m-4 '>
