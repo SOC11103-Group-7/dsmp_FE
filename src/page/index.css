@@ -3,14 +3,19 @@
 @tailwind utilities;
 
 @media screen and (max-width: 768px ) {
-  .flex {
+.flex {
     flex-direction: column;
   }
-  .w-64 {
+.w-64 {
     width: 100%;
     border: none;
   }
-  .w-full {
+.w-full {
     width: 100%;
   }
+  /* Add these styles for adjustments */
+.flex.items-start > * {
+  align-self: flex-start;
+}
+
 }
