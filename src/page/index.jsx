@@ -1,14 +1,15 @@
 import React from 'react';
 import './index.css';
 
+
 export default function Main() {
   return (
     <div className='main-container'>
       <div className='sidebar'>
         <div className='logo' />
         <div className='nav-links'>
-          <span className='nav-link'>Home</span>
-          <span className='nav-link'>Profile</span>
+          <span className='nav-link'><div className='homeicon' />Home</span>
+          <span className='nav-link'><div className='profileicon' />Profile</span>
         </div>
         <button className='user-hash-btn'>User Hash Here</button>
         <button className='connect-btn'>Connect</button>

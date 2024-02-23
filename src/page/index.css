@@ -23,12 +23,32 @@
 }
 
 .logo {
-  margin-left: 49.854px;
-  width: 166.776px;
-  height: 28.042px;
+  margin-left: 48px;
+  margin-top: 2%;
+  width: 176px;
+  height: 30px;
   background-image: url('../assets/images/96858bf39fb28499437875ab86a6d1dcd335a243.png');
   background-size: cover;
   background-repeat: no-repeat;
+}
+.homeicon {
+  background-image: url(../assets/images/home.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 4%;
+  margin-right: 3%;
+  width: 18px;
+  height: 18px;
+}
+
+.profileicon {
+  background-image: url(../assets/images/profile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 4%;
+  margin-right: 3%;
+  width: 18px;
+  height: 18px;
 }
 
 .nav-links {
@@ -46,11 +66,22 @@
   margin-left: 49.854px;
 }
 
-.user-hash-btn,
-.connect-btn {
+.user-hash-btn{
   width: 184.46px;
   height: 41.877px;
   background-color: #ce6343;
+  color: white;
+  border: 1px solid #000;
+  border-radius: 11.852px;
+  overflow: hidden;
+  margin-top: 25.924px;
+  margin-left: 49.854px;
+}
+
+.connect-btn {
+  width: 184.46px;
+  height: 41.877px;
+  background-color: #A2E3A0;
   border: 1px solid #000;
   border-radius: 11.852px;
   overflow: hidden;
@@ -122,7 +153,9 @@
   border-radius: 50%;
 }
 
-
+.user-details{
+  margin-top: 1%;
+}
 
 .username {
   font-family: 'Raleway';
