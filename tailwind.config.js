@@ -1,9 +1,20 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./src/**/*.{html,js}"],
+const colors = require('tailwindcss/colors')
+module.exports = {
+  
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
+    extend: {
+      colors: {
+        'box':'#D8D9C9',
+      }
+      
+    },
+    
+  },
+  variants: {
     extend: {},
   },
-  plugins: [],
-}
-
+  plugins: [require('@tailwindcss/typography')],
+};

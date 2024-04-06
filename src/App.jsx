@@ -1,12 +1,10 @@
-import './App.css'
+import React from 'react';
+import Page from './page';
 
-function App() {
-
+export default function App() {
   return (
-    <>
-      <h1>Decentralized Social Media Platform</h1>
-    </>
-  )
+    <div>
+      <Page />
+    </div>
+  );
 }
-
-export default App

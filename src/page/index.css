@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media screen and (max-width: 768px ) {
+.flex {
+    flex-direction: column;
+  }
+.w-64 {
+    width: 100%;
+    border: none;
+  }
+.w-full {
+    width: 100%;
+  }
+
+.flex.items-start > * {
+  align-self: flex-start;
+}
+
+}
