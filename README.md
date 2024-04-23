@@ -19,3 +19,5 @@ Currently, two official plugins are available:
 ## Screenshots
 ![Image Alt text](/Screenshots/ss1.png)
 ![Image Alt text](/Screenshots/ss2.png)
+![Image Alt text](/Screenshots/ss3.png)
+![Image Alt text](/Screenshots/ss4.png)
