@@ -32,6 +32,8 @@ export default function Home() {
           <button className='w-full h-10 mt-2 bg-green-300 font-medium border border-black rounded-lg overflow-hidden'>Connect</button>
         </div>
       </div>
+
+      {/*  Content */}
       <div className='flex flex-col w-full md:w-1/2 px-10'>
         <div className='w-full h-40 bg-box border border-black rounded-lg overflow-hidden mt-6 bg-box'>
           <input type='text' className='w-full h-full p-4 font-bold text-sm text-gray-900 bg-transparent outline-none' placeholder="What's on your mind??" />
