@@ -28,7 +28,7 @@ export default function Profile() {
               </span>
             </Link>
           </div>
-          <button className='w-full h-10 mt-6 bg-orange-700 font-medium text-white border border-black rounded-lg overflow-hidden'>User Hash Here</button>
+          <button className='w-full h-10 mt-6 bg-orange-700 font-medium text-white border border-black rounded-lg overflow-hidden'>User Hash Here change here</button>
           <button className='w-full h-10 mt-2 bg-green-300 font-medium border border-black rounded-lg overflow-hidden'>Connect</button>
         </div>
       </div> {/*  content */}
