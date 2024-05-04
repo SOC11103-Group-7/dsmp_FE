@@ -38,3 +38,7 @@ $ npm run dev
 ## Screenshots
 ![Image Alt text](/Screenshots/ss1.png)
 ![Image Alt text](/Screenshots/ss2.png)
+
+## RESPECTFULLY REFERENCES TO
+[Source git repository](https://github.com/dappuniversity/decentratwitter)<br>
+[DAPP UNIVERSITY](https://www.dappuniversity.com/)
