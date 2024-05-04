@@ -3,13 +3,13 @@ import Home from './page/Home/Home';
 import { useState } from 'react'
 import Profile from './page/Profile/Profile';
 import { ethers } from "ethers"
-import DecentratwitterAbi from './contractsData/decentratwitter.json'
-import DecentratwitterAddress from './contractsData/decentratwitter-address.json'
+import NexusHubAbi from './contractsData/nexushub.json'
+import NexusHubAddress from './contractsData/nexushub-address.json'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
 } from "react-router-dom";
 
 //IMAGE
@@ -22,7 +22,6 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [account, setAccount] = useState(null);
   const [contract, setContract] = useState({});
-
 
   // METAMASK SETUP
   const web3Handler = async () => {
@@ -45,7 +44,7 @@ export default function App() {
   const loadContract = async (signer) => {
 
     // DEPLOYED CONTRACT
-    const contract = new ethers.Contract(DecentratwitterAddress.address, DecentratwitterAbi.abi, signer)
+    const contract = new ethers.Contract(NexusHubAddress.address, NexusHubAbi.abi, signer)
     setContract(contract)
     setLoading(false)
   }

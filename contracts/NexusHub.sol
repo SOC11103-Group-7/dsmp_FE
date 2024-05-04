@@ -12,7 +12,7 @@ import "hardhat/console.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
-contract Decentratwitter is ERC721URIStorage {
+contract NexusHub is ERC721URIStorage {
     uint256 public tokenCount;
     uint256 public postCount;
     mapping(uint256 => Post) public posts;
@@ -40,7 +40,7 @@ contract Decentratwitter is ERC721URIStorage {
         address payable author
     );
 
-    constructor() ERC721("Decentratwitter", "DAPP") {}
+    constructor() ERC721("NexusHub", "DAPP") {}
 
     function mint(string memory _tokenURI) external returns (uint256) {
         tokenCount++;
@@ -62,7 +62,7 @@ contract Decentratwitter is ERC721URIStorage {
         // Check that the user owns an nft
         require(
             balanceOf(msg.sender) > 0,
-            "Must own a decentratwitter nft to post"
+            "Must own a nft to post"
         );
         // Make sure the post hash exists
         require(bytes(_postHash).length > 0, "Cannot pass an empty hash");
