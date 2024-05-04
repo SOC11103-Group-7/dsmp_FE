@@ -3,7 +3,7 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
-describe("Decentratwitter", function () {
+describe("NexusHub", function () {
   let decentratwitter
   let deployer, user1, user2, users
   let URI = "SampleURI"
