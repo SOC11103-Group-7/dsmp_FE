@@ -62,7 +62,7 @@ export default function App() {
             </span>
             <div className='mt-6'>
               <Link to="/">
-                <span className='flex items-center text-base font-semibold text-gray-900 text-xl'>
+                <span className='flex items-center font-semibold text-gray-900 text-xl'>
                   <div className='w-4 h-4 bg-cover bg-center bg-no-repeat mr-2' style={{ backgroundImage: `url(${HomeIcon})` }} />
                   Home
                 </span>
