@@ -8,6 +8,7 @@ describe("NexusHub", function () {
   let deployer, user1, user2, users
   let URI = "SampleURI"
   let postHash = "SampleHash"
+
   beforeEach(async () => {
     // Get signers from development accounts 
     [deployer, user1, user2, ...users] = await ethers.getSigners();
@@ -18,6 +19,7 @@ describe("NexusHub", function () {
     // user1 mints an nfts 
     await nexushub.connect(user1).mint(URI)
   })
+
   describe('Deployment', async () => {
     it("Should track name and symbol", async function () {
       const nftName = "NexusHub"
@@ -26,6 +28,7 @@ describe("NexusHub", function () {
       expect(await nexushub.symbol()).to.equal(nftSymbol);
     });
   })
+  
   describe('Minting NFTs', async () => {
     it("Should track each minted NFT", async function () {
       expect(await nexushub.tokenCount()).to.equal(1);
@@ -38,6 +41,7 @@ describe("NexusHub", function () {
       expect(await nexushub.tokenURI(2)).to.equal(URI);
     });
   })
+
   describe('Setting profiles', async () => {
     it("Should allow users to select which NFT they own to represent their profile", async function () {
       // user1 mints another nft
@@ -54,6 +58,7 @@ describe("NexusHub", function () {
       ).to.be.revertedWith("Must own the nft you want to select as your profile");
     });
   })
+
   describe('Uploading posts', async () => {
     it("Should track posts uploaded only by users who own an NFT", async function () {
       // user1 uploads a post
@@ -77,7 +82,7 @@ describe("NexusHub", function () {
       // user 2 tried to upload a post without owning an nft
       await expect(
         nexushub.connect(user2).uploadPost(postHash)
-      ).to.be.revertedWith("Must own a nexushub nft to post");
+      ).to.be.revertedWith("Must own a nft to post");
       // FAIL CASE #2 //
       // user 1 tried to upload a post with an empty post hash.
       await expect(
@@ -85,6 +90,8 @@ describe("NexusHub", function () {
       ).to.be.revertedWith("Cannot pass an empty hash");
     });
   })
+
+
   describe('Tipping posts', async () => {
     it("Should allow users to tip posts and track each posts tip amount", async function () {
       // user1 uploads a post
@@ -120,6 +127,8 @@ describe("NexusHub", function () {
       ).to.be.revertedWith("Cannot tip your own post");
     });
   })
+
+
   describe("Getter functions", function () {
     let ownedByUser1 = [1, 2]
     let ownedByUser2 = [3]

@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import './Profile.css';
 import { useState, useEffect } from 'react'
-import UserAvatar from '../../assets/images/78919fd0-ee13-4419-80f3-1c857dd6aea4.png';
 import { create } from 'kubo-rpc-client'
 
 const client = create({ url: "http://127.0.0.1:5002/api/v0" })
@@ -56,12 +55,17 @@ export default function Profile({ contract }) {
 
   // CREATE A PROFILE TO IPFS
   const mintProfile = async (event) => {
-    if (!avatar || !username) return
+    if (!avatar || !username) {
+      alert("Please fill all fields!");
+      return
+    }
     try {
       const result = await client.add(JSON.stringify({ avatar, username }))
       setLoading(true)
       await (await contract.mint(`https://ipfs.io/ipfs/${result.path}`)).wait()
       loadMyNFTs()
+      setUsername('')
+      setAvatar(null);
     } catch (error) {
       window.alert("ipfs uri upload error: ", error)
     }
@@ -72,7 +76,7 @@ export default function Profile({ contract }) {
     await (await contract.setProfile(nft.id)).wait()
     getProfile(nfts)
   }
-  
+
   useEffect(() => {
     if (!nfts) {
       loadMyNFTs()
