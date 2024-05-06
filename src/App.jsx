@@ -67,7 +67,7 @@ export default function App() {
                 </span>
               </Link>
               <Link to="/profile">
-                <span className='flex items-center text-base font-semibold text-gray-900 mt-4  text-xl'>
+                <span className='flex items-center font-semibold text-gray-900 mt-4  text-xl'>
                   <div className='w-4 h-4 bg-cover bg-center bg-no-repeat mr-2' style={{ backgroundImage: `url(${ProfileIcon})` }} />
                   Profile
                 </span>

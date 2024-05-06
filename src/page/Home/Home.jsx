@@ -1,12 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Home.css';
 import { ethers } from "ethers"
-import HomeIcon from '../../assets/images/home.png';
-import ProfileIcon from '../../assets/images/profile.png';
-import UserAvatar from '../../assets/images/78919fd0-ee13-4419-80f3-1c857dd6aea4.png';
 import { create } from 'kubo-rpc-client'
-import LogoImage from '../../assets/images/96858bf39fb28499437875ab86a6d1dcd335a243.png';
-import { Link } from 'react-router-dom';
 
 
 const client = create('http://127.0.0.1:5002/api/v0');
